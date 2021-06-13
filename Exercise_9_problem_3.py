@@ -5,7 +5,6 @@
 # 
 # In this problem the aim is to calculate the "distance" in meters that the individuals have travelled according the social media posts (Euclidean distances between points). In this problem, we will need the `userid` -column an the points created in the previous problem. You will need the shapefile `Kruger_posts.shp` generated in Problem 2 as input file.
 # 
-show()
 # YOUR CODE HERE 1 to read data
 import geopandas as gpd
 from pyproj import CRS
@@ -90,11 +89,15 @@ movements.head()
 #  - What was the maximum distance travelled in meters?
 
 # YOUR CODE HERE 6 to find max, min,mean of the distance.
-
+from statistics import mean
+print(mean(movements['distance'].dropna()))
+print(max(movements['distance'].dropna()))
+print(min(movements['distance']))
 # - Finally, save the movements of into a Shapefile called ``some_movements.shp``
 
 # YOUR CODE HERE 7 to save as Shapefile
-
+fp='some_movements.shp'
+movements.to_file(fp)
 # CODE FOR TESTING YOUR SOLUTION
 
 import os
