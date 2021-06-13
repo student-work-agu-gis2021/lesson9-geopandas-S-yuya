@@ -67,6 +67,8 @@ print(len(geo))
 
 # Plot the polygon. What shape is it :) ?
 # YOUR CODE HERE 4
+geo.plot()
+plt.show()
 
 # What can you see on the map? :) 
 
@@ -76,6 +78,7 @@ print(len(geo))
 fp = 'polygon.shp'
 
 # YOUR CODE HERE 5
+geo.to_file(fp)
 
 # CODE FOR TESTING YOUR SOLUTION
 
