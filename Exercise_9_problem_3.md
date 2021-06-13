@@ -47,7 +47,7 @@ print(data.crs)
 
 ```python
 #  YOUR CODE HERE 3 to group 
-grouped=None
+grouped=data.groupby('userid')
 ```
 
 
